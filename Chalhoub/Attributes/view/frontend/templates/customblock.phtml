@@ -1,0 +1,13 @@
+<?php
+/**
+ * @var $block \Chalhoub\Attributes\Block\DisplayBlock
+ */
+
+$quote = $block->getQuoteData();
+
+foreach($quote->getAllVisibleItems() as $_item) {
+    echo '<h2>'.'Name: '.$_item->getName().'<br/></h2>';
+    echo '<h1>'.'Level Shoes Attribute: '.$_item->getProduct()->getlevelshoes().'<br/></h1>';
+}
+?>
+

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!-- /**
+ * Vendor Desc.
+ *
+ * @category Vendor
+ * @package Vendor_CustomModule
+ * @author Vendor
+ * @copyright Copyright (c) Vendor
+ * @license https://example.com/license.html
+ */ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="checkout.cart.order.actions">
+            <block class="Chalhoub\Attributes\Block\DisplayBlock"
+                   name="checkout.cart.customblock"
+                   template="Chalhoub_Attributes::customblock.phtml">
+            </block>
+        </referenceContainer>
+    </body>
+</page>

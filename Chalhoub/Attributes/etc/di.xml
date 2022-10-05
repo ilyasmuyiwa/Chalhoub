@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- File: app/code/Sm/OrderFeedback/etc/di.xml -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Quote\Model\QuoteRepository">
+        <plugin name="LevelShoesRepository" type="Chalhoub\Attributes\Plugin\Webapi\QuoteRepository"/>
+    </type>
+    <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+        <plugin name="level_address" type="Chalhoub\Attributes\Plugin\LevelAddress" sortOrder="1" />
+    </type>
+    <type name="Magento\Checkout\Model\ShippingInformationManagement">
+        <plugin name="level_address_save_plugin" type="Chalhoub\Attributes\Plugin\ShippingInformationManagementPlugin" sortOrder="10"/>
+    </type>
+        <type name="Magento\Quote\Model\Cart\ShippingMethodConverter">
+            <plugin name="level_carrier" type="Chalhoub\Attributes\Plugin\Carrier\LevelCarrier" sortOrder="30"/>
+        </type>
+
+</config>
